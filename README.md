@@ -23,8 +23,26 @@ $ ./mvnw
 
 ### Realization ###
 
-## main Home ##
+## main Home 1 ##
 
 ![Scheme](images/home.jpg)
 
+## main Home 2 ##
 
+![Scheme](images/home1.jpg)
+
+## Client side : Ask for ride ##
+
+![Scheme](images/askforride.jpg)
+
+## Client Location ##
+
+![Scheme](images/client.jpg)
+
+## Driver side : Authentication ##
+
+![Scheme](images/authdriver.jpg)
+
+## Driver side : Sign up ##
+
+![Scheme](images/signupdriver.jpg)
