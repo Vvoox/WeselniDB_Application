@@ -23,8 +23,8 @@ $ ./mvnw
 
 ### Realization ###
 
-## Home ##
+## main Home ##
 
-![Scheme](imagesR/swagger.png)
+![Scheme](images/home.jpg)
 
 
