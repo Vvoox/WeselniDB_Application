@@ -1,0 +1,74 @@
+<ion-header mode="ios">
+
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-button (click)="backHome()">
+        <ion-icon name="arrow-back"  ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title style="font-family: Pacifico;color: #f9aa33" >Create Account</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content mode="ios">
+  <form class="custom-form" [formGroup]="addDriverFormGroup" (ngSubmit)="addDriver()" >
+
+  <br><br><br>
+    <ion-card-content mode="ios">
+      <ion-item>
+        <ion-avatar slot="start" style="width: 60px ;height: 60px;">
+          <img  src="../../../../assets/icon/logo.png" >
+        </ion-avatar>
+        <ion-card-title style="font-family: Pacifico;color: #f9aa33">Driver</ion-card-title>
+
+      </ion-item>
+    </ion-card-content>
+
+    <ion-card>
+
+      <ion-card-header >
+        Welcome in WESELNIDB
+        <ion-icon name="trending-up-outline"></ion-icon>
+      </ion-card-header>
+
+      <!--      <ion-card-header >-->
+      <!--        Veuillez insérer votre code ou scannez QR code-->
+      <!--      </ion-card-header>-->
+
+      <ion-card-content >
+        <ion-list no-line>
+          <ion-item>
+            <ion-input type="text" placeholder="Name" formControlName="name"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="text" placeholder="Email" formControlName="email" ></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="text" placeholder="Phone number" formControlName="phoneNumber" ></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="password" placeholder="Password" formControlName="password" ></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="password" placeholder="Repeat password" formControlName="repeatPassword" ></ion-input>
+          </ion-item>
+          <br>
+        </ion-list>
+      </ion-card-content>
+
+
+    </ion-card>
+
+    <ion-card-content >
+      <ion-button  expand="block" color="primary" type="submit">Create</ion-button>
+
+    </ion-card-content>
+
+
+  </form>
+
+  <!--  <button class="bottom" ion-button clear full color="light">Don't have an account? Sign up</button>-->
+</ion-content>
+

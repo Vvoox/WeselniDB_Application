@@ -1,0 +1,42 @@
+
+.background {
+  //background-image: url(../../../assets/background/background0.jpg);
+  //--background: url(../../../assets/background/14.jpg) no-repeat center center / cover;
+  --ion-background-color: #f9aa33;
+}
+
+.scroll-content {
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+
+
+a, p,
+{
+  color: #4d6ee3 ;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.icon {
+  padding-right: 10px;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0;
+}
+
+#buttonSubmit {
+  --ion-background-color: transparent;
+}
+
+.title {
+  --ion-background-color: transparent;
+}
+
+

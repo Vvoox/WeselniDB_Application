@@ -1,0 +1,81 @@
+<ion-app>
+  <ion-header mode="ios">
+
+    <ion-toolbar >
+      <ion-buttons slot="end">
+        <ion-button (click)="logOut()">
+          <ion-icon  name="log-out"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title style="font-family: Pacifico;color: #f9aa33" >Profile</ion-title>
+    </ion-toolbar>
+
+  </ion-header>
+
+  <ion-content>
+    <ion-card mode="md">
+
+      <ion-item >
+        <ion-icon name="person-outline" slot="start"></ion-icon>
+        <ion-label style="font-weight: bold; font-size: 15px;font-family: Cortoba">Profile Settings</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-avatar  style="width: 150px ;height: 100px;">
+          <!--        <img *ngIf="profileImage" [src]="profileImage" >-->
+          <img  src="assets/image/user.png" >
+        </ion-avatar>
+
+        <ion-icon name="cloud-upload" color="primary" style="cursor: pointer ;" (click)="uploadProfileImage()"></ion-icon>
+        <ion-icon name="trash" slot="end" color="danger" style="cursor: pointer" (click)="deleteProfileImage()"></ion-icon>
+        <!--      <ion-buttons>-->
+        <!--        <ion-button slot="end"  expand="large" color="primary" fill="outline" >Upload</ion-button>-->
+        <!--      </ion-buttons>-->
+      </ion-item>
+
+    </ion-card>
+
+    <form >
+      <ion-card mode="ios">
+
+        <ion-item >
+          <ion-icon name="person-outline" slot="start"></ion-icon>
+          <ion-label style="font-weight: bold; font-size: 15px;font-family: Cortoba">User information</ion-label>
+        </ion-item>
+        <ion-item >
+          <ion-label slot="start" style="font-weight: bold;font-size: 12px;">Name : </ion-label>
+          <ion-input class="ion-margin-start" ></ion-input>
+        </ion-item>
+        <ion-item >
+          <ion-label  style="font-weight: bold;font-size: 12px;">Lastname : </ion-label>
+          <ion-input  class="ion-margin-start" ></ion-input>
+        </ion-item>
+        <ion-item >
+          <ion-label  slot="start" style="font-weight: bold;font-size: 12px;">Birthday : </ion-label>
+          <ion-input  class="ion-margin-start" type="Date"   style="font-size: 10px;" slot="end"></ion-input>
+        </ion-item>
+        <ion-item >
+          <ion-label   style="font-weight: bold;font-size: 12px;">Gender : </ion-label>
+          <ion-select value="brown" okText="Okay" cancelText="Dismiss"  style="font-size: 10px;">
+            <ion-select-option value="brown">Male</ion-select-option>
+            <ion-select-option value="blonde">Female</ion-select-option>
+            <ion-select-option value="black">Not Precise</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-buttons slot="end">
+            <ion-button   expand="large" color="primary" fill="outline" type="submit" style="width: 70px;height: 20px;">Modifier</ion-button>
+          </ion-buttons>
+        </ion-item>
+
+      </ion-card>
+    </form>
+
+
+
+
+  </ion-content>
+
+  <ion-card-content style="height: 50px;" >
+    <app-footer ></app-footer>
+  </ion-card-content>
+</ion-app>

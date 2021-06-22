@@ -1,0 +1,8 @@
+{
+  "name": "weselnidbFrontend",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

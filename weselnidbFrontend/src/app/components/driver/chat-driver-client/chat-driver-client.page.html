@@ -1,0 +1,64 @@
+<ion-app>
+  <ion-header mode="ios">
+
+    <ion-toolbar >
+      <ion-buttons slot="start">
+        <ion-button (click)="backHome()">
+          <ion-icon name="arrow-back"  ></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title style="font-family: Pacifico;color: #f9aa33">Chat with Client</ion-title>
+    </ion-toolbar>
+
+  </ion-header>
+
+  <ion-content *ngIf="messageOutput.length>0">
+    <ion-card mode="md">
+
+      <ion-item >
+        <ion-icon ios="ios-contact" md="md-contact" slot="start"></ion-icon>
+        <ion-label style="font-weight: bold; font-size: 18px;font-family: Pacifico;color:#f9aa33">Client : {{client}}</ion-label>
+      </ion-item>
+
+      <ion-card   style="background-color: darkslategray">
+
+        <ion-card-header style="color: antiquewhite">{{messages?.msg.date}} - {{messages?.msg.sender.name}}</ion-card-header>
+
+        <ion-card-content >
+          <ion-text style="font-size: 18px;color: antiquewhite;">{{messages.message}}</ion-text>
+        </ion-card-content>
+
+
+      </ion-card >
+<!--      <ion-card  *ngFor="let message of myMessage" style="background-color: indianred">-->
+
+<!--        <ion-card-header >{{time}} - You</ion-card-header>-->
+
+<!--        <ion-card-content >-->
+<!--          <ion-text style="font-size: 18px;">{{message}}</ion-text>-->
+<!--        </ion-card-content>-->
+
+
+<!--      </ion-card>-->
+
+
+
+    </ion-card>
+  </ion-content>
+  <ion-footer style="background-color: white">
+    <form class="custom-form" [formGroup]="chat" (ngSubmit)="send()" >
+      <ion-card >
+        <ion-item >
+          <ion-input placeholder="Send a message" formControlName="message" [value]="chat.value.message"></ion-input>
+          <ion-button  slot="end" style="cursor: pointer" type="submit" >
+            <ion-icon ios="ios-send" md="md-send"></ion-icon>
+          </ion-button>
+        </ion-item>
+      </ion-card>
+    </form>
+
+  </ion-footer>
+  <!--  <ion-card-content style="height: 50px;" >-->
+  <!--    <app-footer ></app-footer>-->
+  <!--  </ion-card-content>-->
+</ion-app>

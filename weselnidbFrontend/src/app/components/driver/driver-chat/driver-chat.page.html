@@ -1,0 +1,37 @@
+<ion-app>
+  <ion-header mode="ios">
+
+    <ion-toolbar >
+      <ion-buttons slot="end">
+        <ion-button (click)="logOut()">
+          <ion-icon  name="log-out"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title style="font-family: Pacifico;color: #f9aa33" >Chat</ion-title>
+    </ion-toolbar>
+
+  </ion-header>
+
+  <ion-content>
+<!--    <ion-card mode="md">-->
+<!--      <ion-item >-->
+<!--        <ion-icon name="timer" slot="start"></ion-icon>-->
+<!--        <ion-label style="font-weight: bold; font-size: 15px;font-family: Cortoba">{{websocketService.getMessageOutput()[0].message}}</ion-label>-->
+<!--      </ion-item>-->
+<!--    </ion-card>-->
+    <ion-card mode="md" >
+
+      <ion-card *ngIf="messages?.message!=null" (click)="chatWithClient()">
+        <ion-icon ios="ios-contact" md="md-contact"  slot="start"></ion-icon>
+        <ion-label style="font-weight: bold; font-size: 18px;font-family: Pacifico;color:#f9aa33">Client : {{messages?.msg.sender.name}}</ion-label>
+        <ion-item>
+          <ion-label style="font-weight: bold; font-size: 12px;font-family: Cortoba;">{{messages?.message}}</ion-label>
+        </ion-item>
+      </ion-card>
+
+    </ion-card>
+  </ion-content>
+  <ion-card-content style="height: 50px;" >
+    <app-footer ></app-footer>
+  </ion-card-content>
+</ion-app>

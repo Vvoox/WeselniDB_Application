@@ -1,0 +1,93 @@
+<ion-header mode="ios">
+
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-button (click)="backHome()">
+        <ion-icon name="arrow-back"  ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title style="font-family: Pacifico;color: #f9aa33">Client</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content mode="ios">
+  <form  [formGroup]="clientForm" (ngSubmit)="onpickupClick()" >
+
+    <br><br><br>
+    <ion-card-content mode="ios">
+      <ion-item>
+        <ion-avatar slot="start" style="width: 60px ;height: 60px;">
+          <img  src="assets/icon/logo.png" >
+        </ion-avatar>
+        <ion-card-title style="font-family: Pacifico;color: #f9aa33">Client</ion-card-title>
+
+      </ion-item>
+    </ion-card-content>
+
+    <ion-card>
+
+<!--      <ion-card-header >-->
+<!--        Welcome in WESELNIDB-->
+<!--        <ion-icon name="trending-up-outline"></ion-icon>-->
+<!--      </ion-card-header>-->
+
+      <!--      <ion-card-header >-->
+      <!--        Veuillez insérer votre code ou scannez QR code-->
+      <!--      </ion-card-header>-->
+
+      <ion-card-content >
+        <ion-list no-line>
+          <ion-item>
+            <ion-input type="text" placeholder="Name" formControlName="name"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="text" placeholder="Phone Number" formControlName="phoneNumber"></ion-input>
+          </ion-item>
+<!--          <ion-item>-->
+<!--            <ion-input type="text" placeholder="Destination" ></ion-input>-->
+<!--            <ion-item style="cursor: pointer;margin-top:100px;" (click)="onpickupClick()">-->
+<!--              <ion-icon slot="start" name="locate"></ion-icon>-->
+<!--              <ion-label position="stacked">Pickup Location</ion-label>-->
+<!--              <ion-textarea  style="margin-top:20px;" >{{pickupLocation}}</ion-textarea>-->
+<!--            </ion-item>-->
+<!--          </ion-item>-->
+          <ion-item>
+            <ion-input type="date" placeholder="time" ></ion-input>
+            <ion-item>
+              <ion-label>Start Date</ion-label>
+              <ion-datetime value="1990-02-19" placeholder="Select Date"></ion-datetime>
+            </ion-item>
+            <ion-item>
+              <ion-label>Start Time</ion-label>
+              <ion-datetime display-format="h:mm A" picker-format="h:mm A" value="1990-02-19T07:43Z"></ion-datetime>
+            </ion-item>
+          </ion-item>
+          <br>
+<!--          <div>-->
+<!--            <a class="ion-margin-start ion-margin-top" style="cursor: pointer;color: grey" (click)="forgetPassword()">Vous avez oublié vos informations?</a>-->
+<!--          </div>-->
+<!--          <div>-->
+<!--            <a class="ion-margin-start ion-margin-top" style="cursor: pointer;font-size: 15px;" >Créer un compte!</a>-->
+<!--          </div>-->
+        </ion-list>
+      </ion-card-content>
+
+
+    </ion-card>
+
+    <ion-card-content >
+      <ion-button  expand="block" color="primary" type="submit" >Set Destination</ion-button>
+
+
+    </ion-card-content>
+
+
+  </form>
+<!--  <div #map id="map"></div>-->
+
+
+  <!--  <button class="bottom" ion-button clear full color="light">Don't have an account? Sign up</button>-->
+</ion-content>
+
+

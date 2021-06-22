@@ -1,0 +1,72 @@
+<ion-header mode="ios">
+
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-button (click)="backHome()">
+        <ion-icon name="arrow-back"  ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+
+    <ion-title style="font-family: Pacifico;color: #f9aa33" >Driver</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content mode="ios">
+  <form [formGroup]="driverLogin" (ngSubmit)="logIn()" >
+
+    <br><br><br>
+    <ion-card-content mode="ios">
+      <ion-item>
+        <ion-avatar slot="start" style="width: 60px ;height: 60px;">
+          <img  src="assets/icon/logo.png" >
+        </ion-avatar>
+        <ion-card-title style="font-family: Pacifico;color: #f9aa33">Driver</ion-card-title>
+
+      </ion-item>
+    </ion-card-content>
+
+    <ion-card>
+
+      <ion-card-header >
+        Welcome in WESELNIDB
+        <ion-icon name="trending-up-outline"></ion-icon>
+      </ion-card-header>
+
+<!--      <ion-card-header >-->
+<!--        Veuillez insérer votre code ou scannez QR code-->
+<!--      </ion-card-header>-->
+
+      <ion-card-content >
+        <ion-list no-line>
+          <ion-item>
+            <ion-input type="text" placeholder="Email" formControlName="email"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+          </ion-item>
+          <br>
+          <div>
+            <a class="ion-margin-start ion-margin-top" style="cursor: pointer;color: grey" (click)="forgetPassword()">Vous avez oublié vos informations?</a>
+          </div>
+          <div>
+            <a class="ion-margin-start ion-margin-top" style="cursor: pointer;font-size: 15px;" (click)="createAccount()">Créer un compte!</a>
+          </div>
+        </ion-list>
+      </ion-card-content>
+
+
+    </ion-card>
+
+    <ion-card-content >
+      <ion-button  expand="block" color="primary" type="submit">Connect</ion-button>
+
+    </ion-card-content>
+
+
+  </form>
+
+  <!--  <button class="bottom" ion-button clear full color="light">Don't have an account? Sign up</button>-->
+</ion-content>
+

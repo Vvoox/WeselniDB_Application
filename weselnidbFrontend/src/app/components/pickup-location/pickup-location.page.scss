@@ -1,0 +1,49 @@
+#map{
+  height: 100%;
+  width: 100%;
+}
+#buttonChat{
+  height: 20px;
+  width: 20px;
+}
+.background {
+  //background-image: url(../../../assets/background/2.jpg);
+  --background: url(../../../assets/background/2.jpg)  no-repeat;
+
+}
+
+.scroll-content {
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+
+
+a, p,
+{
+  color: #4d6ee3 ;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.icon {
+  padding-right: 10px;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0;
+}
+
+#buttonSubmit {
+  --ion-background-color: transparent;
+}
+
+//.font{
+//  --ion-font-family: 'FFF';
+//}
+
+
