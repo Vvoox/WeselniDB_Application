@@ -4,6 +4,7 @@
 ### What is this repository for? ###
 
 * This is a mobile application provide a taxi service with bikes, the aims is to save time, money and energy.
+* Spring boot for the Backend and Ionic For the mobile side
 
 ### How do I get set up? ###
 
