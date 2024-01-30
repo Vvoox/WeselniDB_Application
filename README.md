@@ -1,5 +1,5 @@
 # WeselniDB Mobile Application
-
+La tâche de déploiement est actuellement réservée au techlead, sinon nous attendons l'ITS pour le reste des actions (responsabilité du techlead).
 
 ### What is this repository for? ###
 
